@@ -40,10 +40,6 @@ function validateForm(form) {
     return valid;
 }
 
-// function printGlobalData() {
-// document.getElementById("global-data-display").textContent = JSON.stringify(globalData); 
-// }
-
 function addRow(event, form) {
     event.preventDefault();
     if (!validateForm(form)) return;
@@ -58,7 +54,6 @@ function addRow(event, form) {
     };
     globalData.push(data);
     addToTable(); 
-    printGlobalData();
     form.reset();
 }
 
@@ -84,7 +79,6 @@ function addToTable() {
 function deleteRow(index) {
     globalData.splice(index, 1);
     addToTable();
-    printGlobalData();
 }
 
 function editRow(index) {
